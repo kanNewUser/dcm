@@ -16,44 +16,42 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      body: CustomScaffold(
-        appBar: AppBar(),
-        drawer: MyDrawer(menuName: menuName),
-        body: SingleChildScrollView(
-          child: Obx(() {
-            if (_aboutController.aboutList.isEmpty) {
-              return const Center(child: MyLoader());
-            } else {
-              final about = _aboutController.aboutList.first;
+      appBar: AppBar(),
+      drawer: MyDrawer(menuName: menuName),
+      body: SingleChildScrollView(
+        child: Obx(() {
+          if (_aboutController.aboutList.isEmpty) {
+            return const Center(child: MyLoader());
+          } else {
+            final about = _aboutController.aboutList.first;
 
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  title(),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 30, 0, 15),
-                    child: Text(
-                      about.title.trim(),
-                      softWrap: true,
-                      style: kanitBoldTextStyle,
-                    ),
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                title(),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 15),
+                  child: Text(
+                    about.title.trim(),
+                    softWrap: true,
+                    style: kanitBoldTextStyle,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Text(
-                      about.desc,
-                      style: itimTextStyle,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 3,
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Text(
+                    about.desc,
+                    style: itimTextStyle,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
                   ),
-                  if (about.descByYears.isNotEmpty)
-                    DescriptionList(descList: about.descByYears),
-                ],
-              );
-            }
-          }),
-        ),
+                ),
+                if (about.descByYears.isNotEmpty)
+                  DescriptionList(descList: about.descByYears),
+              ],
+            );
+          }
+        }),
       ),
     );
   }
