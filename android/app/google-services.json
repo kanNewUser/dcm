@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1098062801138",
+    "project_id": "dcm-2-c9eb2",
+    "storage_bucket": "dcm-2-c9eb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098062801138:android:7026121b46bba0f5af086b",
+        "android_client_info": {
+          "package_name": "com.dcm.dcm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNeo0QiAH5SXdRsZ1AIRHUAc2sZ2HA44o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
