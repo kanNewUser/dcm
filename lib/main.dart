@@ -110,7 +110,9 @@ class HomePage extends StatelessWidget {
                           child: GFListTile(
                             avatar: GFAvatar(
                               size: GFSize.SMALL,
+                              backgroundColor: Colors.transparent,
                               child: CachedNetworkImage(
+                                  fit: BoxFit.cover,
                                   placeholder: (context, url) => MyLoader(),
                                   imageUrl: course[index].image),
                               shape: GFAvatarShape.square,

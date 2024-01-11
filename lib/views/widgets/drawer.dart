@@ -51,10 +51,7 @@ void _navigateToPage(String menu) {
       Get.to(() => AboutPage());
       break;
     case 'แผนการเรียน':
-      launchURL(Uri(
-          scheme: 'file',
-          path:
-              'http://www.dcm.sci.ssru.ac.th/useruploads/files/20211113/dd2fbccc0d2e7113c7325aeaad6b2b38da52e300.pdf'));
+      launchURL(Uri.parse('http://www.dcm.sci.ssru.ac.th/useruploads/files/20211113/dd2fbccc0d2e7113c7325aeaad6b2b38da52e300.pdf'));
       break;
     case 'ติดต่ออาจารย์ผู้สอน':
       Get.to(() => TeacherPage());

@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class TeacherPage extends StatelessWidget {
   TeacherPage({super.key});
@@ -77,7 +78,11 @@ class TeacherPage extends StatelessWidget {
               child: SizedBox(
                 width: 200,
                 height: 200,
-                child: Image.network(member.image),
+                child: CachedNetworkImage(
+                  imageUrl: member.image,
+                  placeholder: (context, url) =>
+                      Icon(Icons.waving_hand_rounded),
+                ),
               ),
             ),
           ),
