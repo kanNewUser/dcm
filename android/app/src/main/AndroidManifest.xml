@@ -23,7 +23,7 @@
         </intent>
     </queries>
     <application
-        android:label="dcm"
+        android:label="DCM"
         android:name="${applicationName}"
         android:icon="@mipmap/dcm">
         <activity
