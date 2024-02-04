@@ -50,5 +50,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need to access to your photo library for the features</string>
+	<key>NSDocmentsFloderUsageDescription</key>
+	<string>We need to access to your documents folder for the features</string>
 </dict>
 </plist>
