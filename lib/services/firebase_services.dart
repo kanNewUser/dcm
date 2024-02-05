@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirebaseService {
@@ -9,7 +11,7 @@ class FirebaseService {
       final newsList = snapshot.docs.map((doc) => doc.data()).toList();
       return newsList.cast<Map<String, dynamic>>();
     } catch (e) {
-      print('Error fetching news: $e');
+      log('Error fetching news: $e');
       return [];
     }
   }
@@ -20,7 +22,7 @@ class FirebaseService {
       final memberList = snapshot.docs.map((doc) => doc.data()).toList();
       return memberList.cast<Map<String, dynamic>>();
     } catch (e) {
-      print('Error fetching teachers: $e');
+      log('Error fetching teachers: $e');
       return [];
     }
   }
@@ -31,7 +33,7 @@ class FirebaseService {
       final coursesList = snapshot.docs.map((doc) => doc.data()).toList();
       return coursesList.cast<Map<String, dynamic>>();
     } catch (e) {
-      print('Error fetching teachers: $e');
+      log('Error fetching teachers: $e');
       return [];
     }
   }
@@ -42,7 +44,7 @@ class FirebaseService {
       final contactList = snapshot.docs.map((doc) => doc.data()).toList();
       return contactList.cast<Map<String, dynamic>>();
     } catch (e) {
-      print('Error fetching contact: $e');
+      log('Error fetching contact: $e');
       return [];
     }
   }

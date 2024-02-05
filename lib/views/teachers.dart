@@ -81,7 +81,7 @@ class TeacherPage extends StatelessWidget {
                 child: CachedNetworkImage(
                   imageUrl: member.image,
                   placeholder: (context, url) =>
-                      Icon(Icons.waving_hand_rounded),
+                      const Icon(Icons.waving_hand_rounded),
                 ),
               ),
             ),

@@ -21,6 +21,5 @@ class FacultyMemberController extends GetxController {
         .map((map) => FacultyMember.fromMap(map))
         .toList(); // Convert the set to a list
 
-    print(memberList);
   }
 }

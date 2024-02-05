@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                                 color: Colors.red,
                               )),
                           labelText: 'Search',
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                         ),
                       ),
                     ),
@@ -111,12 +111,12 @@ class HomePage extends StatelessWidget {
                             avatar: GFAvatar(
                               size: GFSize.SMALL,
                               backgroundColor: Colors.transparent,
-                              child: CachedNetworkImage(
-                                  fit: BoxFit.cover,
-                                  placeholder: (context, url) => MyLoader(),
-                                  imageUrl: course[index].image),
                               shape: GFAvatarShape.square,
                               radius: 50,
+                              child: CachedNetworkImage(
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) => const MyLoader(),
+                                  imageUrl: course[index].image),
                             ),
                             titleText:
                                 '${course[index].code}: ${course[index].title}',

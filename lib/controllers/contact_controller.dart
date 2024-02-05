@@ -21,6 +21,5 @@ class ContactController extends GetxController {
     contactList.value =
         rawContacts.map((contactMap) => DcmInfo.fromMap(contactMap)).toList();
 
-    print(contactList);
   }
 }

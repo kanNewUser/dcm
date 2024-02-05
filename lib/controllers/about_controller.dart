@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dcm/models/about_model.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -20,9 +22,8 @@ class AboutController extends GetxController {
           .map((doc) => AboutDigitalContentManagement.fromMap(doc.data()))
           .toList();
 
-      print(aboutList);
     } catch (e) {
-      print('Error fetching about: $e');
+      log('Error fetching about: $e');
     }
   }
 }

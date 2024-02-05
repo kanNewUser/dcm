@@ -21,6 +21,5 @@ class CoursesController extends GetxController {
         .map((map) => CourseModel.fromMap(map))
         .toList(); // Convert the set to a list
 
-    print(courseList);
   }
 }
