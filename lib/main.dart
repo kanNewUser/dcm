@@ -13,14 +13,12 @@ import 'package:getwidget/getwidget.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
- Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
-  
 
   runApp(const MyApp());
 }
@@ -117,7 +115,8 @@ class HomePage extends StatelessWidget {
                               radius: 50,
                               child: CachedNetworkImage(
                                   fit: BoxFit.cover,
-                                  placeholder: (context, url) => const MyLoader(),
+                                  placeholder: (context, url) =>
+                                      const MyLoader(),
                                   imageUrl: course[index].image),
                             ),
                             titleText:
