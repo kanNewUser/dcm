@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dcm/models/contact_model.dart';
 
 import 'package:dcm/services/firebase_services.dart';
@@ -17,9 +19,12 @@ class ContactController extends GetxController {
     final firebaseService = FirebaseService();
     final rawContacts = await firebaseService.fetchContact();
 
-    // Map the raw contact data to DcmInfo instances
-    contactList.value =
-        rawContacts.map((contactMap) => DcmInfo.fromMap(contactMap)).toList();
-
+    try {
+      // Map the raw contact data to DcmInfo instances
+      contactList.value =
+          rawContacts.map((contactMap) => DcmInfo.fromMap(contactMap)).toList();
+    } catch (e) {
+      log('Error fetching about: $e');
+    }
   }
 }

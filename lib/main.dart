@@ -13,12 +13,14 @@ import 'package:getwidget/getwidget.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
+ Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  
 
   runApp(const MyApp());
 }

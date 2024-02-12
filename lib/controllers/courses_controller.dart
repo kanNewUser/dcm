@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dcm/models/courses_model.dart';
 import 'package:dcm/services/firebase_services.dart';
 import 'package:get/get.dart';
@@ -16,10 +18,14 @@ class CoursesController extends GetxController {
     final List<Map<String, dynamic>> facultyData =
         await firebaseService.fetchCourses();
 
-    // Map the list of maps to a list of FacultyMember instances
+  try {
+      // Map the list of maps to a list of FacultyMember instances
     courseList.value = facultyData
         .map((map) => CourseModel.fromMap(map))
         .toList(); // Convert the set to a list
+  } catch (e) {
+    log('Error fetching about: $e');
+  }
 
   }
 }
